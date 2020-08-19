@@ -24,11 +24,14 @@
                         <i class="fas fa-arrow-left"></i>
                     </a>
                 @endif
-
+                    @if($message->user_id == Auth::id())
                 <a class="btn btn-info mx-1" href="{{ route('messages.edit', $message->id) }}" title="изменить">
                     <i class="fas fa-pencil-alt"></i>
                 </a>
                 @include('_common._deleteButtonConfirmation')
+                    @else
+
+                    @endif
 
                 @if ($nextID != NULL)
                     <a class="btn btn-info mx-1" href="{{ route('messages.show', $nextID) }}" title="следующее сообщение">
