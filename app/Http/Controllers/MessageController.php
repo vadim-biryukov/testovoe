@@ -105,7 +105,7 @@ class MessageController extends Controller
         $nextID = ($next != NULL) ? $next->id : NULL;
 
         $data = array(
-            'title' => 'Заметки девелопера.<br> Просмотр записи.',
+            'title' => 'Гостевая книга.<br> Просмотр записи.',
             'metaTitlePrefix'=> 'Просмотр одной записи.',
             'message' => $message,
             'previusID' => $previusID,

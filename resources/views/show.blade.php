@@ -10,7 +10,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="panel-title">
-                <div class="col">Сообщение от <strong>{{ $message->name }}</strong></div>
+                <div class="col">Тема <strong>{{ $message->name }}</strong></div>
                 <div class="col text-right">№ сообщения: {{ $message->id }}</div>
             </div>
         </div>

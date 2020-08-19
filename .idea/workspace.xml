@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c7c7a8d-f314-4501-943b-c923c4e6fe1f" name="Default Changelist" comment="Создал репозиторий">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +175,7 @@
       <workItem from="1597770507248" duration="5016000" />
       <workItem from="1597775774292" duration="3000" />
       <workItem from="1597779129714" duration="191000" />
-      <workItem from="1597821174121" duration="21792000" />
+      <workItem from="1597821174121" duration="22123000" />
     </task>
     <task id="LOCAL-00001" summary="Создал проект">
       <created>1597772238334</created>
@@ -211,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597843775261</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Создал репозиторий">
+      <created>1597847482329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597847482329</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,11 +263,11 @@
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1597771420759" />
     <state x="390" y="154" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597843182889" />
-    <state x="494" y="245" key="Vcs.Push.Dialog.v2" timestamp="1597843812862">
+    <state x="494" y="245" key="Vcs.Push.Dialog.v2" timestamp="1597847489063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1597772447411" />
-    <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597843812862" />
+    <state x="494" y="245" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597847489063" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1597748811943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
