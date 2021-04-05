@@ -5,17 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Регистрация') }}</div>
+                <div class="card-header">{{ __('Редактировать профиль') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('auth.edit') }}" novalidate>
                         @csrf
 
                         <div class="form-group row">
                             <label for="login_user" class="col-md-4 col-form-label text-md-right">{{ __('Логин') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login_user" type="text" class="form-control @error('login_user') is-invalid @enderror" name="login_user" value="{{ old('login_user') }}" required autocomplete="login_user" autofocus>
+                                <input id="login_user" type="text" class="form-control @error('login_user') is-invalid @enderror" name="login_user" value="{{ Request::old('login_user') ?: Auth::user()->login_user }}" required autocomplete="login_user" autofocus>
 
                                 @error('login_user')
                                     <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                             <label for="fio" class="col-md-4 col-form-label text-md-right">{{ __('ФИО') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fio" type="text" class="form-control @error('fio') is-invalid @enderror" name="fio" value="{{ old('fio') }}" required autocomplete="fio" autofocus>
+                                <input id="fio" type="text" class="form-control @error('fio') is-invalid @enderror" name="fio" value="{{ Request::old('fio') ?: Auth::user()->fio }}" autocomplete="fio" autofocus>
 
                                 @error('fio')
                                 <span class="invalid-feedback" role="alert">
@@ -42,7 +42,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Request::old('email') ?: Auth::user()->email }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Зарегистрироваться') }}
+                                    {{ __('Сохранить изменения') }}
                                 </button>
                             </div>
                         </div>
