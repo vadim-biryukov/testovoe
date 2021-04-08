@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\News;
+use App\News_type;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -27,7 +29,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $news=News::all()->sortByDesc('sorting');
+
+        return view('home',compact('news'));
+
+    }
+    public function info($id){
+        $read=News::find($id);
+        $news_types_id=News::find($id)->news_types_id;
+        $type_title = News_type::find($news_types_id)->title;
+        return view('info')->with([
+            'read' => $read,
+            'type_title' => $type_title
+        ]);
     }
 
 
