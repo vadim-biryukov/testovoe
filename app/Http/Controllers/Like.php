@@ -10,13 +10,12 @@ use Illuminate\Support\Facades\Storage;
 
 class Like extends Controller
 {
-    public static  function likeNews($id)
-
+    public  function likeNews(Request $request)
     {
         //Добавляем запись
             Likes::create(array(
                 'user_id' => Auth::user()->id,
-                'news_id' => $id
+                'news_id' => $request->input('news_id')
             ));
             return redirect('info');
 

@@ -35,7 +35,9 @@ class Edit_news extends Controller
 
             }
         }
-
+        $id = $request->input('id');
+        //Обновление основных данных
+        $contact = News::find($id);
 
         $this->validate($request, [
             'header' => ['required', 'string', 'max:255'],
@@ -43,13 +45,12 @@ class Edit_news extends Controller
 
             'sorting' => ['required', 'integer', 'max:100']
         ]);
-        if ($request->input('day_news') != '') {
-            $this->validate($request, ['day_news' => ['required', 'integer', 'max:1', 'unique:news']]);
-        }
-
         $id = $request->input('id');
         //Обновление основных данных
         $contact = News::find($id);
+        if ($request->input('day_news') != '' && $contact->day_news !='1') {
+            $this->validate($request, ['day_news' => ['required', 'integer', 'max:1', 'unique:news']]);
+        }
 
         $contact->header = $request->input('header');
         $contact->text = $request->input('text');

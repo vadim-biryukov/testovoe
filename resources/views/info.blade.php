@@ -20,7 +20,7 @@
                         <label>{{$type_title}}</label><br>
                         <label>{{$read->text}}</label>
 
-                        <form id="like" method="post" action="{{('info/'.$read->id)}}">
+                        <form id="like" method="post" action="{{('info')}}">
                             <input type="text" style="display: none" value="{{$id=$read->id}}" name='news_id'>
 
                             <input class="btn btn-primary" style="margin: 25px 40%;" type="button"
