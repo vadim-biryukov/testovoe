@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Likes;
 use App\News;
 use App\News_type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class Edit_news extends Controller
+class EditNews extends Controller
 {
     public function editPost()
     {
@@ -19,7 +22,6 @@ class Edit_news extends Controller
         ]);
 
     }
-
     public function editNews(Request $request)
     {
         if (!$request->file('img')) {
@@ -67,4 +69,5 @@ class Edit_news extends Controller
             'info_message' => true
         ]);
     }
+
 }

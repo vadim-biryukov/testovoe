@@ -21,9 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/info/{id}', 'HomeController@info')->name('info');
+Route::get('/newsDetail', 'HomeController@info')->name('newsDetail');
 
-Route::post('/info/{id}', 'LikeController@likeNews')->middleware('auth')->name('info');
+Route::post('/newsDetail', 'LikeController@newsLike')->name('newsDetail');
+
 
 Route::get('/account', 'EditingUser@account')->middleware('auth')->name('account');
 
@@ -41,7 +42,7 @@ Route::get('/admin/admin_news', 'Adminnews@getPanel')->middleware('auth', 'isadm
 
 Route::post('/admin/admin_news', 'Adminnews@postNews')->middleware('auth', 'isadmin')->name('admin.admin_news');
 
-Route::get('/admin/edit_news', 'Edit_news@editPost')->middleware('auth', 'isadmin')->name('admin.edit_news');
+Route::get('/admin/edit_news', 'EditNews@editPost')->middleware('auth', 'isadmin')->name('admin.edit_news');
 
-Route::post('/admin/edit_news', 'Edit_news@editNews')->middleware('auth', 'isadmin')->name('admin.edit_news');
+Route::post('/admin/edit_news', 'EditNews@editNews')->middleware('auth', 'isadmin')->name('admin.edit_news');
 
