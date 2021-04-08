@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Likes;
 use App\News;
 use App\News_type;
 use Illuminate\Support\Facades\Auth;
@@ -36,11 +37,14 @@ class HomeController extends Controller
     }
     public function info($id){
         $read=News::find($id);
+        $news_id=$id;
+        $count_like=Likes::where('news_id',$id)->count();
         $news_types_id=News::find($id)->news_types_id;
         $type_title = News_type::find($news_types_id)->title;
         return view('info')->with([
             'read' => $read,
-            'type_title' => $type_title
+            'type_title' => $type_title,
+            'count_like' => $count_like
         ]);
     }
 
