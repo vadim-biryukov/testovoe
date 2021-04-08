@@ -20,9 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/info/{id}', 'HomeController@info')->name('info');
 
-Route::post('/info', 'Like@likeNews')->middleware('auth')->name('info');
+Route::post('/info/{id}', 'LikeController@likeNews')->middleware('auth')->name('info');
 
 Route::get('/account', 'EditingUser@account')->middleware('auth')->name('account');
 
