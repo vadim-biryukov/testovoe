@@ -29,11 +29,6 @@ class LikeController extends Controller
             ));
 
         }
-        $read = News::find($id);
-        $news_id = $id;
-        $count_like = Likes::where('news_id', $id)->count();
-        $news_types_id = News::find($id)->news_types_id;
-        $type_title = News_type::find($news_types_id)->title;
         return redirect('newsDetail?id='.$id);
 
     }

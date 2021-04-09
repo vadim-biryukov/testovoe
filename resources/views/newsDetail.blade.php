@@ -13,12 +13,12 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <h1>{{$read->header}}</h1>
-                        <img width="100%" src="{{ asset('storage/folder/'.$read->img) }}">
-                        <p>Создана:{{$read->created_at}}</p>
-                        <p>Отредактирована:{{$read->updated_at}}</p>
+                        <h1>{{$news->header}}</h1>
+                        <img width="100%" src="{{ asset('storage/folder/'.$news->img) }}">
+                        <p>Создана:{{$news->created_at}}</p>
+                        <p>Отредактирована:{{$news->updated_at}}</p>
                         <label>{{$type_title}}</label><br>
-                        <label>{{$read->text}}</label>
+                        <label>{{$news->text}}</label>
 
 
                         <div class="card-body">
@@ -30,7 +30,7 @@
                                     <div class="col-md-6">
                                         <input id="news_id" type="text"
                                                class="form-control @error('news_id') is-invalid @enderror" name="news_id"
-                                               value="{{$read->id}}" required autocomplete="email" autofocus>
+                                               value="{{$news->id}}" required autocomplete="email" autofocus>
 
                                         @error('news_id')
                                         <span class="invalid-feedback" role="alert">
