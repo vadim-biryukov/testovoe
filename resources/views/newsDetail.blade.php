@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+    {{--в шаблоне добавим вывод сообщения--}}
+    @if($errors->any())
+        <div class="alert alert-success" role="alert">
+        {{$errors->first()}}
+        </div>
+    @endif
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
